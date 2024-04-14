@@ -36,7 +36,9 @@ export default function Home() {
 
   return (
     <main className="container py-10">
-      <h1 className="text-4xl tracking-widest">You want to play? Let's Play</h1>
+      <h1 className="text-4xl tracking-widest">
+        You want to play? Let&apos;s Play
+      </h1>
       <h2 className="text-muted-foreground mb-20">
         (<span className="text-primary">{player}</span>) Player Turn
       </h2>

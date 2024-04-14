@@ -5,8 +5,6 @@ const LineWinner = ({
 }: {
   location: horizontalType | verticalType | diagonalType;
 }) => {
-  console.log(location);
-
   let className;
   if (location === "top") {
     className = "w-[calc(100%)] h-2  top-[calc(((1_/_3)_*_100%)_/_2)] -mt-2 ";

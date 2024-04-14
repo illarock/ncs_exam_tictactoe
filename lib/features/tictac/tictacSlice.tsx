@@ -46,15 +46,6 @@ export const tictacSlice = createSlice({
 
           if (winningResult) {
             let lineLocation;
-
-            // const winningMoveTop = state.results.find((result: ticTacResult) =>
-            //   winningNumbers[0].every((num) => result.moves.includes(num))
-            // );
-
-            // if (winningMoveTop) {
-            //   lineLocation = "top";
-            // }
-
             switch (i) {
               case 0:
                 lineLocation = "top" as horizontalType;
