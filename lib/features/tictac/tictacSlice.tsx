@@ -46,9 +46,6 @@ export const tictacSlice = createSlice({
             winningNumber.every((num) => result.moves.includes(num))
           );
 
-          console.log(state.results[0].moves.length);
-          console.log(state.results[1].moves.length);
-
           if (winningResult) {
             let lineLocation;
             switch (i) {
@@ -89,7 +86,7 @@ export const tictacSlice = createSlice({
             state.results[1].moves.length === 4
           ) {
             state.gamewinner = {
-              player: "No One",
+              player: "No Winner",
             };
           }
         }

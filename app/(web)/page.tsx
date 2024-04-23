@@ -79,7 +79,11 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col items-center justify-center mt-10">
-        {gamewinner?.player && (
+        {gamewinner?.player === "No Winner" ? (
+          <h3 className="text-2xl font-bold tracking-widest mb-5">
+            <span className="text-destructive">{gamewinner?.player}</span>
+          </h3>
+        ) : (
           <h3 className="text-2xl font-bold tracking-widest mb-5">
             Winner is <span className="text-primary">{gamewinner?.player}</span>
           </h3>
