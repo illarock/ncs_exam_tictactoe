@@ -26,6 +26,8 @@ export const tictacSlice = createSlice({
         activePlayer?.moves.push(move);
         state.player = state.player === "One" ? "Two" : "One";
 
+        // console.log(state.results[0]);
+
         const winningNumbers = [
           [1, 2, 3],
           [4, 5, 6],
@@ -43,6 +45,9 @@ export const tictacSlice = createSlice({
           const winningResult = state.results.find((result: ticTacResult) =>
             winningNumber.every((num) => result.moves.includes(num))
           );
+
+          console.log(state.results[0].moves.length);
+          console.log(state.results[1].moves.length);
 
           if (winningResult) {
             let lineLocation;
@@ -78,6 +83,13 @@ export const tictacSlice = createSlice({
             state.gamewinner = {
               player: winningResult.player,
               lineLocation: lineLocation,
+            };
+          } else if (
+            state.results[0].moves.length === 5 &&
+            state.results[1].moves.length === 4
+          ) {
+            state.gamewinner = {
+              player: "No One",
             };
           }
         }

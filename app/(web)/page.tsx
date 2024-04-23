@@ -23,6 +23,8 @@ export default function Home() {
         player: player,
       })
     );
+
+    detectEnd();
   };
 
   const activePlayer = (playerName: string, i: number) => {
@@ -32,6 +34,12 @@ export default function Home() {
     );
 
     return playerStatus.length !== 0;
+  };
+
+  const detectEnd = () => {
+    // if (results[0].moves.length && 4 && results[1].moves.length) {
+    //   console.log("no winner");
+    // }
   };
 
   return (
@@ -81,7 +89,7 @@ export default function Home() {
         </Button>
       </div>
 
-      {gamewinner?.player && (
+      {gamewinner?.lineLocation && (
         <Confetti className="w-full h-screen" width={1400} height={1400} />
       )}
     </main>
